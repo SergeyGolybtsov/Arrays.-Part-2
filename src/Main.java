@@ -19,22 +19,22 @@ public class Main {
         System.out.println("Задание 1");
         int[] arr = generateRandomArray();
         int sum = 0;
-        for (int i : arr) {
-            sum += i;
+        for (int index : arr) {
+            sum += index;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
     }
     public static void task2() {
         System.out.println("Задание 2");
-        int maxSum = 100_000;
-        int minSum = 200_000;
+        int maxSum = 99_999;
+        int minSum = 200_001;
         int[] arr = generateRandomArray();
-        for (int j : arr) {
-            if (j > maxSum) {
-                maxSum = j;
+        for (int index : arr) {
+            if (index > maxSum) {
+                maxSum = index;
             }
-            if (j < minSum) {
-                minSum = j;
+            if (index < minSum) {
+                minSum = index;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minSum + " рублей. Максимальная сумма трат за день составила " + maxSum + " рублей");
@@ -44,12 +44,11 @@ public class Main {
     public static void task3() {
         System.out.println("Задание 3");
         int[] arr = generateRandomArray();
-        int day = 30;
         int sum = 0;
-        for (int i : arr) {
-            sum += i;
+        for (int index : arr) {
+            sum += index;
         }
-        int averageExpenses = sum / day;
+        double averageExpenses = (sum * 1.) / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + averageExpenses + " рублей");
 
     }
